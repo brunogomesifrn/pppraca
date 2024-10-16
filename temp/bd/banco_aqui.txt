@@ -1,0 +1,1 @@
+Inserir nesta pasta tudo o que for relacionado à modelagem do banco de dados.
