@@ -15,44 +15,78 @@
     -->
 
     <nav class="navbar navbar-expand-lg nav d-flex justify-content-center">
-        <div class="container-fluid nav-size m-0">
-          <a class="navbar-brand col-6 col-md-4  justify-content-center d-flex" href="#">
-            <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
-            <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
-          </a>
-          <button class="navbar-toggler botao" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="container-fluid nav-size m-0">
+        <a class="navbar-brand col-6 col-md-4  justify-content-center d-flex" href="#">
+          <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
+          <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
+        </a>
+        <button class="navbar-toggler botao" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <form class="form col-4 justify-content-center" role="search">
-            <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        
-          <div class="collapse navbar-collapse col-4  justify-content-evenly nav-btns" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><img class="icon-nav" src="imgs/icon-nav/Vector.svg" alt=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline.svg" alt=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline-bold.svg" alt="" > <img class="icon-navb" src="imgs/icon-nav/Line-7.svg" alt=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/Group-15.svg" alt=""></a>
-              </li>
-            </ul>
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img class="icon-navf" src="imgs/icon-nav/selecionar-idioma.svg" alt=""></a>
-              </li>
+        <form class="form col-4 justify-content-center" role="search">
+          <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      
+        <div class="collapse navbar-collapse col-4  justify-content-evenly nav-btns" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"><img class="icon-nav" src="imgs/icon-nav/Vector.svg" alt=""></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline.svg" alt=""></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline-bold.svg" alt="" > <img class="icon-navb" src="imgs/icon-nav/Line-7.svg" alt=""></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/Group-15.svg" alt=""></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img class="icon-navf" src="imgs/icon-nav/selecionar-idioma.svg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-links" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand d-md-none" href="#">
+          <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+          Aperture
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+              <li class="nav-item"><a class="nav-link" href="#">INÍCIO</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">A PRAÇA</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">ACERVO</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">ACONTECIMENTOS</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">ESPAÇOS</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">VISITAÇÃO</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="#">CONTATO</a></li>
             </ul>
           </div>
         </div>
+      </div>
     </nav>
-
 
 
 

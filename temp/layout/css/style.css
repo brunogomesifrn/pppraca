@@ -1,3 +1,6 @@
+body{
+    background-color: ;
+}
 
 
 .nav{
@@ -14,7 +17,7 @@
 }
 
 .icon{
-    width: 30%;
+    width: 25%;
 }
 
 a{
@@ -50,8 +53,12 @@ ul{
     display: flex;
 }
 
+.navbar-links{
+    background-color: #548404;
+}
+
 @media (max-width: 991px) {
-    .form{
+    .form, .navbar-links{
         display: none;
     }
     .botao{
