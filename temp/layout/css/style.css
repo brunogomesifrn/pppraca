@@ -1,3 +1,5 @@
+
+
 .nav{
     background-color: #d9e4c7;
 }
@@ -7,9 +9,55 @@
 }
 
 .navbar-brand{
-
+    align-items: center;
+    display: flex;
 }
 
 .icon{
-    
+    width: 30%;
+}
+
+a{
+
+}
+
+ul{
+    margin-right: 0;
+}
+
+.nav-btns{
+    width: 0px;
+}
+
+.pesquisa{
+    width: 50%;
+}
+
+.icon-nav{
+    width: 20px;
+}
+
+.icon-navb{
+    width: 20px;
+    height: 20px;
+}
+
+.icon-navf{
+    width: 60px;
+}
+
+.form {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .form{
+        display: none;
+    }
+    .botao{
+        margin-right: 20px;
+    }
+    .nav-size{
+        height: 7rem;
+    }
 }

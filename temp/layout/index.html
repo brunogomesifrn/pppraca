@@ -9,43 +9,44 @@
   </head>
   <body>
     
+    <!-- 
+    LINK DO FIGMA
+    https://www.figma.com/design/AjPNgOvrQqiTSMXmTurgcY/Site-da-Pra%C3%A7a-da-Paz-Entre-os-Povos?node-id=0-1&node-type=canvas&t=UnTLF8VhDdmP8kjy-0
+    -->
 
-    <nav class="navbar navbar-expand-lg nav">
-        <div class="container-fluid nav-size">
-            <a class="navbar-brand col" href="#">
-                <img class="img-fluid icon col-6" src="imgs/icon.png" alt="Icon">
-                <img class="img-fluid icon col-6" src="imgs/icon-text.png" alt="Icon Text">
-            </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg nav d-flex justify-content-center">
+        <div class="container-fluid nav-size m-0">
+          <a class="navbar-brand col-8 col-md-4  justify-content-center d-flex" href="#">
+            <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
+            <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
+          </a>
+          <button class="navbar-toggler botao" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="form col-4 justify-content-center" role="search">
+            <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse col-4  justify-content-evenly nav-btns" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#"><img class="icon-nav" src="imgs/icon-nav/Vector.svg" alt=""></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="#"><img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline.svg" alt=""></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/ph_text-a-underline-bold.svg" alt="" > <img class="icon-navb" src="imgs/icon-nav/Line-7.svg" alt=""></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> <img class="icon-nav" src="imgs/icon-nav/Group-15.svg" alt=""></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img class="icon-navf" src="imgs/icon-nav/selecionar-idioma.svg" alt=""></a>
               </li>
             </ul>
           </div>
