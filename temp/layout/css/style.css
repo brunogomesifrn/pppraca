@@ -1,5 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
 body{
-    background-color: ;
+    background-color: #91B05D;
+    margin-bottom: 500px;
 }
 
 
@@ -57,6 +68,10 @@ ul{
     background-color: #548404;
 }
 
+.nav-item, .nav-link{
+    color: #F4F4DC;
+}
+
 @media (max-width: 991px) {
     .form, .navbar-links{
         display: none;
@@ -67,4 +82,41 @@ ul{
     .nav-size{
         height: 7rem;
     }
+}
+
+.pt1{
+    img{
+        border-radius: 20px;
+        box-shadow: 12px 15px 19px -12px #084005
+    }
+}
+
+h2{
+        font-family: Poppins;
+        font-weight: 700;
+        color: #084005;
+    }
+
+.pt2{
+    background-color: rgba(0, 0, 255, 0);
+    
+    p{
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+}
+
+.horario{
+    p{
+        color: #084005;
+        margin-bottom: 2px;
+        font-size: 1.1rem;
+    }
+}
+
+.img-espaco{
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    width: 29;
 }
