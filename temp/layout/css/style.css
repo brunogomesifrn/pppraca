@@ -82,6 +82,19 @@ ul{
     .nav-size{
         height: 7rem;
     }
+    .espaco{
+        width: 160px;
+        height: 200px;
+        border-radius: 0;
+        background-color: rgba(9, 255, 0, 0);
+        margin: 10px;
+    
+        h3{
+            font-size: 1.4em;
+        }
+    }
+    
+
 }
 
 .pt1{
@@ -114,9 +127,27 @@ h2{
     }
 }
 
+.espaco{
+    width: 200px;
+    height: 240px;
+    background-color: rgba(9, 255, 0, 0);
+    margin: 25px 10px 10px 10px;
+    border-radius: 20px 0p 20px 0px;
+
+    h3{
+        font-size: 1.4em;
+    }
+}
+
 .img-espaco{
-    background-position: center center;
-    background-size: cover;
+    object-fit: cover;
+    width: 200px;
     height: 200px;
-    width: 29;
+    border-radius: 15px ;
+    margin-bottom: 10px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.mais-info{
+    background-color: #ACC27C;
 }
