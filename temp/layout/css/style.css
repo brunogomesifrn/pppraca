@@ -14,7 +14,7 @@ body{
 }
 
 
-.nav{
+.nav, .div-form-mobile{
     background-color: #d9e4c7;
 }
 
@@ -28,7 +28,7 @@ body{
 }
 
 .icon{
-    width: 25%;
+    width: 45%;
 }
 
 a{
@@ -45,6 +45,16 @@ ul{
 
 .pesquisa{
     width: 50%;
+    background-color: #548404;
+}
+
+.form, .form-mobile input::placeholder{
+    color: #EBE7E4;
+}
+
+.form, .form-mobile input:focus{
+    background-color: #548404;
+    color: white;
 }
 
 .icon-nav{
@@ -72,8 +82,18 @@ ul{
     color: #F4F4DC;
 }
 
+
+
+
+@media (min-width: 1199px){
+    .icon{
+        width: 25%;
+    }
+}
+
+
 @media (max-width: 991px) {
-    .form, .navbar-links{
+    .navbar-links{
         display: none;
     }
     .botao{
@@ -93,7 +113,13 @@ ul{
             font-size: 1.4em;
         }
     }
-    
+    .icon{
+        width: 35%;
+    }
+
+    .form{
+        display: none;
+    }
 
 }
 
