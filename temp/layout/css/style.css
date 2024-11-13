@@ -49,13 +49,15 @@ ul{
 }
 
 .form, .form-mobile input::placeholder{
+    
     color: #EBE7E4;
 }
 
 .form, .form-mobile input:focus{
-    background-color: #548404;
+
     color: white;
 }
+
 
 .icon-nav{
     width: 20px;
