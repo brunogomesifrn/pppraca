@@ -84,6 +84,16 @@ ul{
     color: #F4F4DC;
 }
 
+.praca{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.praca-img{
+    width: 80%;
+}
+
 
 
 
@@ -91,6 +101,22 @@ ul{
     .icon{
         width: 25%;
     }
+    .mais-info{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .praca{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .praca-img{
+        width: 100%;
+    }
+    
+    
 }
 
 
@@ -122,6 +148,17 @@ ul{
     .form{
         display: none;
     }
+
+    .praca{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .praca-img{
+        width: 80%;
+    }
+    
 
 }
 
@@ -182,5 +219,81 @@ h2{
 }
 
 .mais-info-content{
-    margin: 0px 100px 0px 150px;
+    margin: 0px 0% 0px 0px;
+
 }
+
+.icones-acesso-rapido{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.icones-acesso-rapido-img{
+    width: 70%;
+}
+
+.faq{
+    
+}
+
+.faq-title{
+    font-family: Poppins;
+    font-weight: 700;
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 60px;
+    color: #084005;
+}
+.subtitle{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6em;
+
+}
+
+.faq-container{
+    width: 900px;
+    height: 743px;
+    background-color: #D9E4C7;
+
+}
+.faq-questions-div{
+    margin: auto 0;
+}
+
+.faq-question{
+    background-color: white;
+    width: 600px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 24px;
+    font-size: 1.3em;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+
+.faq-question-circle{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 16px 0px rgba(8, 15, 53, 0.16);
+    img{
+        width: 60%;
+    }
+}
+
+/* .faq-planta{
+    position: relative;
+    width: 200px;
+    height: 400px;
+    top: 200px;
+    left: -200px;
+} */
+
