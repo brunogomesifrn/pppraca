@@ -84,6 +84,42 @@ ul{
     color: #F4F4DC;
 }
 
+
+
+
+
+
+
+/*!!!! ESTILIZAÇÃO MENU MOBILE!!!!!*/
+
+.menu-mobile{
+    background-color: rgba(84, 132, 4, 1);
+}
+
+.btn-menu{
+    background-color: rgba(217, 228, 199, 1);
+
+}
+
+.menu-mobile-opened{
+    background-color: rgba(84, 132, 4, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .praca{
     display: flex;
     justify-content: center; 
@@ -122,8 +158,10 @@ ul{
         background-color: #D9E4C7;
     }
 
-    
-    
+    .local-img{
+        object-fit: cover;
+    }
+
 }
 
 
@@ -167,7 +205,10 @@ ul{
     }
 
 
-    
+    .local-img{
+        object-fit: cover;
+        display: block;
+    }
     
 
 }
@@ -317,8 +358,26 @@ h2{
     background-color: rgba(84, 132, 4, 1);
     margin: 2rem 0;
     padding: 2em;
+    padding: 5em;
 }
 
+.como-chegar-title{
+    p{
+        color: white;
+        text-align: center;
+        height: 100%;
+    }
+}
+
+.local-img-div{
+    width: 100%;
+}
+
+.local-img{
+    width: 100em;
+    height: 30em;
+    object-fit: contain;
+}
 
 
 
