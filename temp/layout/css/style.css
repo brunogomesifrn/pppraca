@@ -389,4 +389,31 @@ h2{
     }
 }
 
+.voltar-text{
+    color: rgba(8, 64, 5, 1);
+}
+
+.footer-p1{
+    background-color: rgba(85, 134, 5, 1);
+    padding: 20px 40px 20px 40px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.footer-p1 > div > p{
+    color:  white;
+}
+.form-control{
+    width: 80%;
+}
+
+.form-container {
+    padding: 15px;
+}
+.btn-custom {
+    background-color: #333333; /* Cor do botão */
+    color: white;
+}
+.btn-custom:hover {
+    background-color: #555555;
+}
 
