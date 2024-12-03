@@ -120,6 +120,7 @@ ul{
 
 
 
+
 .praca{
     display: flex;
     justify-content: center; 
@@ -358,7 +359,6 @@ h2{
     background-color: rgba(84, 132, 4, 1);
     margin: 2rem 0;
     padding: 2em;
-    padding: 5em;
 }
 
 .como-chegar-title{
@@ -379,5 +379,14 @@ h2{
     object-fit: contain;
 }
 
+.parceiro-img{
+    margin: 10px;
+
+    img{
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+    }
+}
 
 
