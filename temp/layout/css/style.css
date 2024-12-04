@@ -420,7 +420,6 @@ h2{
     .newsletter-container{
         width: 100%;
     }
-    
 }
 
 
@@ -431,7 +430,7 @@ h2{
     color: #2a3d23; /* Cor do texto */
 }
 .footer-logo {
-    background-color: red; /* Cor de fundo temporária para a logo */
+    background-color: rgba(255, 0, 0, 0); /* Cor de fundo temporária para a logo */
     width: 150px;
     height: 150px;
     display: flex;
@@ -458,4 +457,8 @@ h2{
     font-size: 12px;
     text-align: center;
     color: #666;
+    
+}
+.img-footer{
+    width: 150px;
 }
