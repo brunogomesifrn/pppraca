@@ -10,7 +10,6 @@
 
 body{
     background-color: #91B05D;
-    margin-bottom: 500px;
 }
 
 
@@ -422,4 +421,41 @@ h2{
         width: 100%;
     }
     
+}
+
+
+.footer-container {
+    background-color: rgba(217, 228, 199, 1); /* Cor do fundo */
+    padding: 30px 20px;
+    font-size: 14px;
+    color: #2a3d23; /* Cor do texto */
+}
+.footer-logo {
+    background-color: red; /* Cor de fundo temporária para a logo */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #2a3d23;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.social-icons a {
+    font-size: 24px;
+    color: #2a3d23;
+    margin: 0 10px;
+}
+.social-icons a:hover {
+    color: #6b9c36;
+}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    color: #666;
 }
