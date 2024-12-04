@@ -45,17 +45,21 @@ ul{
 .pesquisa{
     width: 50%;
     background-color: #548404;
-}
-
-.form, .form-mobile input::placeholder{
-    
-    color: #EBE7E4;
-}
-
-.form, .form-mobile input:focus{
-
     color: white;
 }
+
+.pesquisa::placeholder{
+    color: white;
+}
+
+.pesquisa:focus{
+
+    background-color: #548404;
+    color: white;
+
+}
+
+
 
 
 .icon-nav{
@@ -160,8 +164,12 @@ ul{
 
     .local-img{
         object-fit: cover;
-    }
+    }   
 
+    .navbar-brand{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -263,6 +271,31 @@ h2{
     border-radius: 15px ;
     margin-bottom: 10px;
     border-radius: 40px 10px 40px 10px;
+}
+
+@media (max-width: 991px) {
+
+    .espaco{
+        width: 160px;
+        height: 200px;
+        background-color: rgba(9, 255, 0, 0);
+        margin: 25px 10px 10px 10px;
+        border-radius: 20px 0p 20px 0px;
+    
+        h3{
+            font-size: 1.4em;
+        }
+    }
+    
+    
+    .img-espaco{
+        object-fit: cover;
+        width: 140px;
+        height: 140px;
+        border-radius: 15px ;
+        margin-bottom: 10px;
+        border-radius: 40px 10px 40px 10px;
+    }
 }
 
 .mais-info{
@@ -391,13 +424,16 @@ h2{
 
 .voltar-text{
     color: rgba(8, 64, 5, 1);
+    font-size: 1.5em;
 }
+
+
 
 
 
 .newsletter-container {
     background-color: #6b9c36; /* Cor verde */
-    width: 70%;
+    width: 80%;
     color: white;
     padding: 30px;
     border-radius: 20px 20px 0 0; /* Bordas arredondadas no topo */
@@ -406,7 +442,6 @@ h2{
     background-color: #333333; /* Cor do botão */
     color: white;
     border-radius: 0 20px 20px 0; /* Bordas arredondadas do botão */
-    font-size: auto;
 }
 .btn-custom:hover {
     background-color: #555555;
@@ -419,6 +454,10 @@ h2{
 
     .newsletter-container{
         width: 100%;
+    }
+
+    .voltar-text{
+        font-size: 1.3em;
     }
 }
 
