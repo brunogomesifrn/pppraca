@@ -1,0 +1,21 @@
+
+
+body{
+    background-color: #ACC27C;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.img-sobre{
+    height: 28rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 991px) {
+    .img-sobre{
+        height: 15rem;
+    }
+}
