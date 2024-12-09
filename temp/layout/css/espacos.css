@@ -8,6 +8,10 @@ body {
     background-color: #759C30;
 }
 
+.map{
+    background-color: #759C30;
+}
+
 .card img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -32,3 +36,57 @@ body {
     background-color: #245724;
     color: #ffffff;
 }
+
+.map-header {
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-header img {
+    width: 40px;
+    height: 40px;
+}
+
+.map-image {
+    border-radius: 12px;
+    margin-top: 20px;
+    object-fit: cover;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+
+.legend {
+    margin-top: 20px;
+}
+
+.legend h5 {
+    color: #245724;
+    font-weight: bold;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.form-check-input {
+    accent-color: #3a773a; /* Personaliza a cor do checkbox */
+    width: 20px;
+    height: 20px;
+}
+
+.legend-text {
+    color: #245724;
+    font-weight: 500;
+    font-size: 1.8em;
+}
+
+
