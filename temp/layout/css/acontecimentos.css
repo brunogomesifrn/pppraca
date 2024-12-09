@@ -1,0 +1,37 @@
+/* Personalização dos cards */
+.card-custom {
+    background-color: #f7f7e7;
+    border: 1px solid #d4d4c4;
+    border-radius: 10px;
+}
+
+.card-custom img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.btn-vermais {
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-vermais:hover {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+body{
+    background-color: #D9E4C7;
+}
+
+.nossos-projetos{
+    background-color: #91B05Ded;
+}

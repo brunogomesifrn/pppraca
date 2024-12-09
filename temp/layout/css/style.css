@@ -12,6 +12,9 @@ body{
     background-color: #91B05D;
 }
 
+.text-justify{
+    text-align: justify;
+}
 
 .nav, .div-form-mobile{
     background-color: #d9e4c7;
