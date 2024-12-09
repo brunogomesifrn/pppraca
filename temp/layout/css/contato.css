@@ -1,0 +1,36 @@
+body {
+    background-color: #91B05D;
+}
+
+.form-card {
+    background-color: #558605;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #fff;
+}
+.form-card input, .form-card textarea {
+    border-radius: 5px;
+    border: none;
+    padding: 0.8rem;
+}
+.form-card input::placeholder, .form-card textarea::placeholder {
+    color: #999;
+}
+.form-card button {
+    background-color: #DE9409;
+    color: #084005  ;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+}
+h1, h2 {
+    color: #084005;
+}
+a {
+    text-decoration: none;
+    color: #172117;
+}
+
+.text-green{
+    color: #084005;
+}
