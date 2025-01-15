@@ -1,4 +1,4 @@
-# Praça da Paz Entre os Povos
+# Praça da Paz Entre os Povos 
 
 ## Instalação:
 1. Criar o ambiente virtual para instalar as bibliotecas (se o primeiro comando a seguir não funcionar, utilizar o segundo):
