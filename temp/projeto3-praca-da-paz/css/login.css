@@ -1,0 +1,73 @@
+body {
+    background-color: #d0e4c3;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .login-card {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.611);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+
+  .login-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 50px rgba(13, 101, 31, 0.561);
+  }
+
+  .login-card h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    background-color: #E8F5E9;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 5px #2E7D32;
+    border-color: #2E7D32;
+  }
+
+  .btn-login {
+    background-color: #FF8C00;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .btn-login:hover {
+    background-color: #E67E22;
+    transform: scale(1.05);
+  }
+
+  .login-card small {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .login-card a {
+    color: #FFEB3B;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .login-card a:hover {
+    color: #FFC107;
+  }

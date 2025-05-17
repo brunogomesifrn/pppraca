@@ -3,20 +3,53 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VISITAÇÃO</title>
+    <title>INÍCIO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/visitacao.css">
+    <link rel="shortcut icon" href="imgs/tree-solid.svg" type="image/x-icon">
+
   </head>
   <body>
-    <!-- 
-    LINK DO FIGMA
-    https://www.figma.com/design/AjPNgOvrQqiTSMXmTurgcY/Site-da-Pra%C3%A7a-da-Paz-Entre-os-Povos?node-id=0-1&node-type=canvas&t=UnTLF8VhDdmP8kjy-0
-    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav class="navbar navbar-expand-lg nav d-flex justify-content-center">
       <div class="container-fluid nav-size m-0 ">
-        <a class="ms-5 d-none d-lg-block navbar-brand col-6 col-md-4" href="#">
+        <a class="ms-5 d-none d-lg-block navbar-brand col-6 col-md-4" href="index.html">
           <div class="d-flex justify-content-center align-items-center">
             <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
             <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
@@ -78,7 +111,23 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
-              <li class="nav-item"><a class="nav-link" href="index.html">INÍCIO</a></li>  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="sobreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 INÍCIO
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="sobreDropdown">
+                  <li><a class="dropdown-item" href="index.html">Página Inicial</a></li>
+                  <li><a class="dropdown-item" href="#">Missão e Valores</a></li>
+                  <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                  <li><a class="dropdown-item" href="#">Normas e Condutas</a></li>
+                  <li class="parcerias"><a class="dropdown-item" href="#parceiros">Parcerias</a>
+                    <ul class="menu-parcerias">
+                      <li class="menu-parcerias-item">Prefeitura de Canguaretama</li>
+                      <li class="menu-parcerias-item">IFRN Nova Cruz</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> 
               <li class="nav-item nav-link">|</li>
               <li class="nav-item"><a class="nav-link" href="sobre-praca.html">A PRAÇA</a></li>
               <li class="nav-item nav-link">|</li>
@@ -91,6 +140,8 @@
               <li class="nav-item"><a class="nav-link" href="visitacao.html">VISITAÇÃO</a></li>
               <li class="nav-item nav-link">|</li>
               <li class="nav-item"><a class="nav-link" href="contato.html">CONTATO</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="login.html">LOGIN</a></li>  
             </ul>
           </div>
         </div>
@@ -112,7 +163,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">INÍCIO</a>
+                <a class="nav-link active" aria-current="page" href="index.html">INÍCIO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sobre-praca.html">A PRAÇA</a>
@@ -127,10 +178,13 @@
                 <a class="nav-link" href="espacos.html">ESPAÇOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="visitacao.html">VISITAÇÃO</a>
+                <a class="nav-link" href="visitacao.html">VISITAÇÃO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contato.html">CONTATO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="login.html">LOGIN</a>
               </li>
             </ul>
           </div>
@@ -151,7 +205,7 @@
 
 
 
-    
+
 
 
 
@@ -163,114 +217,141 @@
 
 
     <main class="container">
+      <div>
+        <div class="row mt-5">
+          <div class="pt1 col-12 col-xl-6 praca">
+            <img class="img-fluid praca-img" src="imgs/img-sobre.jpg" alt="">
+          </div>
+          <div class="pt2 col-12 col-xl-5">
+            <h2 class="mt-4 mt-sm-4 mb-3">Sobre a praça</h2>
+            <p class="">A Praça Etnobotânica é um espaço dedicado à preservação e celebração dos saberes tradicionais afro-brasileiros e indígenas. Neste local, a rica diversidade de plantas nativas é apresentada não apenas como elementos naturais, mas como portadoras de histórias e conhecimentos ancestrais. As espécies vegetais, cuidadosamente cultivadas, são reconhecidas por seus usos medicinais, rituais e alimentares, refletindo a profunda conexão entre as comunidades tradicionais e a natureza.</p>
+          </div>
+        </div>
+        <div class="horario mt-4 d-flex">
+          <div>
+            <img src="imgs/clock.svg" alt="">
+          </div>
+          <div class="ms-3">
+            <p><strong>Horários de funcionamento:</strong></p>
+            <P>De Segunda à Sexta das  8H00 - 17H00.</P>
+          </div>
+        </div>
+      </div>
+      <div class="espacos-praca">
+        <h2 class="mt-5 mb-3 fs-1">Espaços da praça</h2>
+        
+        
+        <div class="d-flex flex-wrap justify-content-center">
+          
+          
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/jardim.jpg" alt="">
+            <h3 class="text-center mt-2">Espaço Jardim</h3>
+          </div>
+
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/jardim-sensorial.jpg" alt="">
+            <h3 class="text-center">Jardim Sensorial</h3>
+          </div>
+
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/espaco-da-conexao.jpg" alt="">
+            <h3 class="text-center">Espaço da Conexão</h3>
+          </div>
+
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/espaco-do-cuidado.jpg" alt="">
+            <h3 class="text-center">Espaço do Cuidado</h3>
+          </div>
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/espaco-paz.jpg" alt="">
+            <h3 class="text-center">Espaço Circulo da Paz</h3>
+          </div>
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/espaco-afro.jpg" alt="">
+            <h3 class="text-center">Espaço Aláfia/nhy-rõ</h3>
+          </div>
+          <div class="espaco">
+            <img class="img-espaco" src="imgs/espacos-praca/espaco-coqueiral.jpg" alt="">
+            <h3 class="text-center">Espaço Coqueiral</h3>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <main class="container-fluid">
+      <div class="mais-info mt-5">
+        <div class="mais-info-content">
+          <h2 class="p-5 pb-3 mb-3 fs-1">Mais informações</h2>
+          <p class="p-5 pt-0 pb-3 fs-5">Os links de acesso rápido irão te ajudar a navegar com mais facilidade no nosso site, basta clicar e você será redirecionado para onde deseja .</p>
+
+          <!--NESSA PARTE, FALTA O MAPEAMENTO DE IMAGEM NA IMAGEM-->
+          <div class="icones-acesso-rapido"><img src="imgs/icones-mais-info.png" alt="Ícones -links de acesso rápido" class="icones-acesso-rapido-img"></div>
+        </div>
+      </div>
+      <div class="faq mt-5">
+        <h1 class="faq-title">F A Q</h1>
+        <h2 class="subtitle">Perguntas mais frequentes a respeito da praça.</h2>
+        <div class="d-flex justify-content-center mt-5 ">
+          <div class="faq-container d-flex justify-content-center rounded-5">
+            <div class="faq-questions-div">
+              <div class="faq-question rounded-3 ">
+                <p class="fs-5">O que é a praça da paz entre os povos?</p>
+                <span class="faq-question-circle"><img src="imgs/faq-seta.svg" alt=""></span>
+              </div>
+              <div class="faq-question rounded-3 ">
+                <p class="fs-5">Há estacionamento disponível?</p>
+                <span class="faq-question-circle"><img src="imgs/faq-seta.svg" alt=""></span>
+              </div>
+              <div class="faq-question rounded-3 ">
+                <p class="fs-5">A praça é acessível para pessoas deficientes?</p>
+                <span class="faq-question-circle"><img src="imgs/faq-seta.svg" alt=""></span>
+              </div>
+              <div class="faq-question rounded-3 ">
+                <p class="fs-5">O que é a praça da paz entre os povos?</p>
+                <span class="faq-question-circle"><img src="imgs/faq-seta.svg" alt=""></span>
+              </div>
+              <div class="faq-question rounded-3 ">
+                <p class="fs-5">O que é a praça da paz entre os povos?</p>
+                <span class="faq-question-circle"><img src="imgs/faq-seta.svg" alt=""></span>
+              </div>
+            </div>
+            <!-- <img src="imgs/planta.png" alt="" class="faq-planta"> --> 
+          </div>
+        </div>
+      </div>
+    </main>
 
 
+    <main class="container">
+      <div class="como-chegar">
 
-        <div class="form-container">
-            <form>
-                <!-- Cabeçalho -->
-                <div class="form-header">
-                    <img src="imgs/folha.svg" alt="Ícone de folha">
-                    <h4>Dados do Responsável</h4>
-                </div>
-    
-                <!-- Dados do Responsável -->
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome completo:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Escreva seu nome">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control" id="email" placeholder="ex: eu@gmail.com">
-                </div>
-                <div class="mb-3">
-                    <label for="telefone" class="form-label">Telefone:</label>
-                    <input type="text" class="form-control" id="telefone" placeholder="(84) 9 9999-9999">
-                </div>
-    
-                <!-- Tipos de Visitação -->
-                <div class="form-header">
-                    <img src="imgs/folha.svg" alt="Ícone de folha">
-                    <h4>Tipos de visitação</h4>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipoVisita" id="pedagogica">
-                    <label class="form-check-label" for="pedagogica">Visita pedagógica</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipoVisita" id="pesquisa">
-                    <label class="form-check-label" for="pesquisa">Visita de pesquisa</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipoVisita" id="campo">
-                    <label class="form-check-label" for="campo">Aula de campo</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipoVisita" id="outros">
-                    <label class="form-check-label" for="outros">Outros</label>
-                </div>
-    
-                <!-- Detalhes da Visita -->
-                <div class="form-header">
-                    <img src="imgs/folha.svg" alt="Ícone de folha">
-                    <h4>Detalhes da Visita</h4>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="data" class="form-label">Data:</label>
-                        <input type="date" class="form-control" id="data">
-                    </div>
-                    <div class="col">
-                        <label for="hora" class="form-label">Hora:</label>
-                        <input type="time" class="form-control" id="hora">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="quantidade" class="form-label">Quantidade de pessoas:</label>
-                    <input type="number" class="form-control" id="quantidade" placeholder="XX pessoas">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Algum componente tem necessidades especiais?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="necessidadesEspeciais" id="sim">
-                        <label class="form-check-label" for="sim">Sim</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="necessidadesEspeciais" id="nao">
-                        <label class="form-check-label" for="nao">Não</label>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="descricaoNecessidades" class="form-label">Se sim, por favor descreva abaixo:</label>
-                    <textarea class="form-control" id="descricaoNecessidades" rows="2"></textarea>
-                </div>
-    
-                <!-- Comentários Adicionais -->
-                <div class="form-header">
-                    <img src="imgs/folha.svg" alt="Ícone de folha">
-                    <h4>Comentários adicionais</h4>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" id="comentarios" rows="3" placeholder="Comentários ou perguntas, por favor escreva abaixo"></textarea>
-                </div>
-    
-                <!-- Confirmação -->
-                <div class="form-check mb-4">
-                    <input class="form-check-input" type="checkbox" id="confirmacao">
-                    <label class="form-check-label" for="confirmacao">
-                        Eu confirmo que li e concordo com as regras e normas de visitação da praça.
-                    </label>
-                </div>
-    
-                <!-- Botão de Agendar -->
-                <button type="submit" class="btn btn-primary w-100 fs-2 fw-normal">Agendar</button>
-            </form>
+
+        <div class="d-flex como-chegar-title align-items-center mb-4">
+          <img src="imgs/local-icon.png" alt="Icone local" class="img-fluid">
+          <p class="m-0 d-flex align-middle fs-1 fw-bold   ms-2">Como chegar</p>
         </div>
 
-
-
-
-
+        <div class="local-img-div">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2800866014272!2d-35.165509725901735!3d-6.35778086219561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b281b76d43b843%3A0x9e8e30a410d04552!2sIFRN%20Campus%20Canguaretama!5e0!3m2!1spt-BR!2sbr!4v1733148607395!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="parceiros  mt-5">
+        <div class="d-flex align-middle ms-4">
+          <img src="imgs/parceiros-icone.svg" alt="Icone parceiros" class="img-fluid">
+          <h2 class="title ms-3 m-0 fs-1" id="parceiros">Parceiros</h2>
+        </div>
+        <div class="parceiros-img-div d-flex flex-wrap justify-content-center mt-4">
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros1.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros2.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros3.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros4.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros5.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros6.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+          <div class="parceiro-img"><img src="imgs/parceiros/parceiros7.jpg" alt="Imagem parcieros" class="img-fluid rounded-circle"></div>
+        </div>
+      </div>
 
       <a href="#" class="text-decoration-none">
         <div class="voltar-inicio d-flex justify-content-center mt-5 mb-5 ms-3 me-3 row d-flex justify-content-center">
@@ -281,6 +362,7 @@
           <img src="imgs/voltar-icon-right.svg" alt="Planta" class="img-fluid col-3 col-md-2">
         </div>
       </a>
+
     </main>
 
 

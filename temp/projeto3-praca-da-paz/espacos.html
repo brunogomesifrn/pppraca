@@ -3,22 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ACERVO</title>
+    <title>ESPAÇOS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/acervo.css">
+    <link rel="stylesheet" href="css/espacos.css">
+    <link rel="shortcut icon" href="imgs/tree-solid.svg" type="image/x-icon">
   </head>
   <body>
-    
-    <!-- 
-    LINK DO FIGMA
-    https://www.figma.com/design/AjPNgOvrQqiTSMXmTurgcY/Site-da-Pra%C3%A7a-da-Paz-Entre-os-Povos?node-id=0-1&node-type=canvas&t=UnTLF8VhDdmP8kjy-0
-    -->
-
     <nav class="navbar navbar-expand-lg nav d-flex justify-content-center">
       <div class="container-fluid nav-size m-0 ">
-        <a class="ms-5 d-none d-lg-block navbar-brand col-6 col-md-4" href="#">
+        <a class="ms-5 d-none d-lg-block navbar-brand col-6 col-md-4" href="index.html">
           <div class="d-flex justify-content-center align-items-center">
             <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
             <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
@@ -81,7 +77,23 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
-              <li class="nav-item"><a class="nav-link" href="index.html">INÍCIO</a></li>  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="sobreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 INÍCIO
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="sobreDropdown">
+                  <li><a class="dropdown-item" href="index.html">Página Inicial</a></li>
+                  <li><a class="dropdown-item" href="#">Missão e Valores</a></li>
+                  <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                  <li><a class="dropdown-item" href="#">Normas e Condutas</a></li>
+                  <li class="parcerias"><a class="dropdown-item" href="index.html#parceiros">Parcerias</a>
+                    <ul class="menu-parcerias">
+                      <li class="menu-parcerias-item">Prefeitura de Canguaretama</li>
+                      <li class="menu-parcerias-item">IFRN Nova Cruz</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> 
               <li class="nav-item nav-link">|</li>
               <li class="nav-item"><a class="nav-link" href="sobre-praca.html">A PRAÇA</a></li>
               <li class="nav-item nav-link">|</li>
@@ -94,6 +106,8 @@
               <li class="nav-item"><a class="nav-link" href="visitacao.html">VISITAÇÃO</a></li>
               <li class="nav-item nav-link">|</li>
               <li class="nav-item"><a class="nav-link" href="contato.html">CONTATO</a></li>
+              <li class="nav-item nav-link">|</li>
+              <li class="nav-item"><a class="nav-link" href="login.html">LOGIN</a></li>  
             </ul>
           </div>
         </div>
@@ -122,19 +136,22 @@
                 <a class="nav-link" href="sobre-praca.html">A PRAÇA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="acervo.html">ACERVO</a>
+                <a class="nav-link" href="acervo.html">ACERVO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="acontecimentos.html">ACONTECIMENTOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="espacos.html">ESPAÇOS</a>
+                <a class="nav-link active" href="espacos.html">ESPAÇOS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="visitacao.html">VISITAÇÃO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contato.html">CONTATO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="login.html">LOGIN</a>
               </li>
             </ul>
           </div>
@@ -168,147 +185,147 @@
 
 
     <main class="container">
-      <div class="d-flex align-middle mt-5">
-        <img src="imgs/folha.svg" alt="Icone parceiros"class="img-fluid">
-        <h2 class="title ms-3 m-0 fs-1">NOSSO ACERVO</h2>
-      </div>
-      <div class="mt-3">
-        <p class="fs-3 text-succsess text-justify">Os acervos etnobotânicos são coleções vivas que preservam e compartilham o conhecimento ancestral sobre o uso das plantas por diferentes culturas, especialmente as indígenas e afro-brasileiras. Esses acervos vão além do simples cultivo de espécies; eles representam a conexão profunda entre as comunidades e a natureza, mostrando como as plantas são utilizadas para alimentação, medicina, rituais espirituais, e outras práticas culturais.</p>
+
+      <div class="mt-5">
+        <h1 class="mt-4 mt-sm-4 mb-3 text-succsess fw-bold">Conheça os espaços da praça</h1>
+        <p class="fs-4 text-succsess text-justify">Nossa praça oferece espaços cuidadosamente planejados para proporcionar momentos de tranquilidade, aprendizado e diversão para todas as idades. Cada canto da praça foi projetado para inspirar e conectar as pessoas com a beleza natural e a diversidade cultural.</p>
       </div>
 
+      <div class="container py-5">
 
+        <!-- Grid de Cards -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="imgs/espacos-praca/jardim.jpg" alt="Espaço Jardim" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Espaço Jardim</h5>
+                  <p class="card-text  text-light">Fica próximo à vivência, é um ambiente de descanso, alimentação e socialização entre os estudantes, além de ser utilizado para abrigar eventos diversos.</p>
+                  <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                </div>
+              </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="imgs/espacos-praca/espaco-da-conexao.jpg" alt="Espaço da Conexão" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Espaço da Conexão</h5>
+                        <p class="card-text  text-light">O Espaço de Conexão foi pensado para a prática de meditação e o descanso, expandindo, assim, a funcionalidade da área de vivência.</p>
+                        <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
 
-      <div class="d-flex align-middle mt-5">
-        <h2 class="title m-0 fs-2 ms-3 text-succsess fw-bold">ALUMÃ</h2>
-      </div>
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row align-items-center card-custom">
-          <!-- Coluna da imagem -->
-          <div class="col-md-6">
-              <img src="imgs/plantas/aluma.jpg" alt="Planta" class="img-fluid w-100">
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="imgs/espacos-praca/espaco-do-cuidado.jpg" alt="Espaço do Cuidado" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Espaço do Cuidado</h5>
+                        <p class="card-text  text-light">O espaço de cuidado foi previsto para funcionar como um viveiro de mudas, trocando as plantas que necessitam ser regularmente repostas com o tempo.</p>
+                        <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="imgs/espacos-praca/espaco-coqueiral.jpg" alt="Espaço Coqueiral" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Espaço Coqueiral</h5>
+                        <p class="card-text  text-light">O espaço de cuidado foi previsto para funcionar como um viveiro de mudas, trocando as plantas que necessitam ser regularmente repostas com o tempo.</p>
+                        <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card">
+                  <img src="imgs/espacos-praca/espaco-paz.jpg" alt="Espaço Circulo da paz" class="card-img-top">
+                  <div class="card-body">
+                      <h5 class="card-title">Espaço Círculo da Paz</h5>
+                      <p class="card-text  text-light">Nesse espaço foi plantado em agosto de 2017 um baobá africano com quinze anos de vida, vindo da cidade de Fortaleza/CE, e considerada sagrada pelos potiguaras.</p>
+                      <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                  </div>
+              </div>
           </div>
-          <!-- Coluna do texto -->
-          <div class="col-md-6 mt-3">
-            <h5><strong>Nome científico:</strong> Vernonia</h5>
-            <p><strong>Família:</strong> asteraceae</p>
-            <p><strong>Origem:</strong> áfrica tropical</p>
-            <a href="#" class="btn-saiba-mais">
-              Saiba mais
-              <!-- Ícone de seta -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.293 1.5a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414-1.414L12.086 6H1.5a1 1 0 0 1 0-2h10.586l-1.793-1.793a1 1 0 0 1 0-1.414z"/>
-              </svg>
-            </a>
+
+          <!-- Card 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+                <img src="imgs/espacos-praca/jardim-sensorial.jpg" alt="Espaço Jardim Sensorial" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Jardim Sensorial</h5>
+                    <p class="card-text  text-light">Esse espaço foi pensado especialmente para incitar os sentidos humanos e acolher estudantes e visitantes com alguma necessidades específicas.</p>
+                    <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+                </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-
-
-      <div class="d-flex align-middle mt-5">
-        <h2 class="title m-0 fs-2 ms-3 text-succsess fw-bold">AMORA</h2>
-      </div>
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row align-items-center card-custom">
-          <!-- Coluna da imagem -->
-          <div class="col-md-6">
-              <img src="imgs/plantas/amora.jpg" alt="Planta" class="img-fluid w-100">
-          </div>
-          <!-- Coluna do texto -->
-          <div class="col-md-6 mt-3">
-            <h5><strong>Nome científico:</strong> Morus nigra</h5>
-            <p><strong>Família:</strong> Moraceae</p>
-            <p><strong>Origem:</strong> Ásia</p>
-            <a href="#" class="btn-saiba-mais">
-              Saiba mais
-              <!-- Ícone de seta -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.293 1.5a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414-1.414L12.086 6H1.5a1 1 0 0 1 0-2h10.586l-1.793-1.793a1 1 0 0 1 0-1.414z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="d-flex align-middle mt-5">
-        <h2 class="title m-0 fs-2 ms-3 text-succsess fw-bold">ARAÇÁ</h2>
-      </div>
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row align-items-center card-custom">
-          <!-- Coluna da imagem -->
-          <div class="col-md-6">
-              <img src="imgs/plantas/araca.jpg" alt="Planta" class="img-fluid w-100">
-          </div>
-          <!-- Coluna do texto -->
-          <div class="col-md-6 mt-3">
-            <h5><strong>Nome científico:</strong> Psidium guineense Swart</h5>
-            <p><strong>Família:</strong> Myrtaceae</p>
-            <p><strong>Origem:</strong> Brasil</p>
-            <a href="#" class="btn-saiba-mais">
-              Saiba mais
-              <!-- Ícone de seta -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.293 1.5a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414-1.414L12.086 6H1.5a1 1 0 0 1 0-2h10.586l-1.793-1.793a1 1 0 0 1 0-1.414z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="d-flex align-middle mt-5">
-        <h2 class="title m-0 fs-2 ms-3 text-succsess fw-bold">ABACAXI</h2>
-      </div>
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row align-items-center card-custom">
-          <!-- Coluna da imagem -->
-          <div class="col-md-6">
-              <img src="imgs/plantas/abacaxi.jpg" alt="Planta" class="img-fluid w-100">
-          </div>
-          <!-- Coluna do texto -->
-          <div class="col-md-6 mt-3">
-            <h5><strong>Nome científico:</strong> Ananas comosus</h5>
-            <p><strong>Família:</strong> Bromeliaceae</p>
-            <p><strong>Origem:</strong> América do Sul</p>
-            <a href="#" class="btn-saiba-mais">
-              Saiba mais
-              <!-- Ícone de seta -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.293 1.5a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414-1.414L12.086 6H1.5a1 1 0 0 1 0-2h10.586l-1.793-1.793a1 1 0 0 1 0-1.414z"/>
-              </svg>
-            </a>
+          <!-- Card 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="imgs/espacos-praca/espaco-afro.jpg" alt="Espaço Aláfia/nhy-rõ" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-titl ">Espaço Aláfia/nhy-rõ</h5>
+                <p class="card-text  text-light">Aláfia/nhy-rõ, o segundo ambiente da Praça, é um termo que significa "prosperidade" em árabe e "paz" no vocabulário yorubá.</p>
+                <button class="btn btn-saiba-mais w-100">Saiba mais</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-
-      <div class="d-flex align-middle mt-5">
-        <h2 class="title m-0 fs-2 ms-3 text-succsess fw-bold">ARECA BAMBU</h2>
-      </div>
-      <div class="container mt-4 d-flex justify-content-center">
-        <div class="row align-items-center card-custom">
-          <!-- Coluna da imagem -->
-          <div class="col-md-6">
-              <img src="imgs/plantas/bambu.jpg" alt="Planta" class="img-fluid w-100">
-          </div>
-          <!-- Coluna do texto -->
-          <div class="col-md-6 mt-3">
-            <h5><strong>Nome científico:</strong> Dypsis lutescens</h5>
-            <p><strong>Família:</strong> Arecaceae</p>
-            <p><strong>Origem:</strong> África Tropical - Madagascar,  África</p>
-            <a href="#" class="btn-saiba-mais">
-              Saiba mais
-              <!-- Ícone de seta -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.293 1.5a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414-1.414L12.086 6H1.5a1 1 0 0 1 0-2h10.586l-1.793-1.793a1 1 0 0 1 0-1.414z"/>
-              </svg>
-            </a>
-          </div>
+      <div class="container map pb-2">
+        <!-- Cabeçalho do Mapa -->
+        <div class="map-header mb-3 pt-3">
+            <img src="imgs/icon _map_.svg" alt="Ícone de mapa">
+            <h2 class="mb-0 fs-1">Mapa dos espaços</h2>
         </div>
-      </div>
+
+        <!-- Imagem do Mapa -->
+        <img src="imgs/mapa-praca.jpg" alt="Mapa dos espaços" class="map-image">
+
+        <!-- Legenda com Formulário -->
+        <form class="legend">
+          <h2>Legenda</h2>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="jardim">
+              <label class="legend-text" for="jardim">Espaço Jardim</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="conexao">
+              <label class="legend-text" for="conexao">Espaço da Conexão</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="cuidado">
+              <label class="legend-text" for="cuidado">Espaço do Cuidado</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="circulo">
+              <label class="legend-text" for="circulo">Círculo da Paz</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="sensorial">
+              <label class="legend-text" for="sensorial">Jardim Sensorial</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="coqueiral">
+              <label class="legend-text" for="coqueiral">Espaço Coqueiral</label>
+          </div>
+          <div class="legend-item">
+              <input class="form-check-input" type="checkbox" id="alafia">
+              <label class="legend-text" for="alafia">Espaço Aláfia/nhy-rô</label>
+          </div>
+      </form>        
+
+
+      </div>      
 
 
       <a href="#" class="text-decoration-none">
@@ -320,7 +337,6 @@
           <img src="imgs/voltar-icon-right.svg" alt="Planta" class="img-fluid col-3 col-md-2">
         </div>
       </a>
-
     </main>
 
 
