@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -9,41 +11,10 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="imgs/tree-solid.svg" type="image/x-icon">
-
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/menu.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/style.css' %}">
   </head>
   <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -51,8 +22,8 @@
       <div class="container-fluid nav-size m-0 ">
         <a class="ms-5 d-none d-lg-block navbar-brand col-6 col-md-4" href="index.html">
           <div class="d-flex justify-content-center align-items-center">
-            <img class="img-fluid icon" src="imgs/icon.png" alt="Icon">
-            <img class="img-fluid icon" src="imgs/icon-text.png" alt="Icon Text">
+            <img class="img-fluid icon" src="{% static 'imgs/icon.png' %}" alt="Icon">
+            <img class="img-fluid icon" src="{% static 'imgs/icon-text.png' %}" alt="Icon Text">
           </div>
         </a>
         <form class="form col-4 justify-content-center" role="search">
@@ -243,9 +214,9 @@
         
         <div class="d-flex flex-wrap justify-content-center">
           
-          
+
           <div class="espaco">
-            <img class="img-espaco" src="imgs/espacos-praca/jardim.jpg" alt="">
+            <img class="img-espaco" src="{% static 'imgs/espacos-praca/jardim.jpg' %}" alt=""/>
             <h3 class="text-center mt-2">Espaço Jardim</h3>
           </div>
 
