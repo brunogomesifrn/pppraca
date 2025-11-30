@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listagem de Espaços</h1>
+
+{% for espaco in lista_espacos %}
+    <p>{{espaco.nome}}</p>
+    <img src="{{ espaco.imagem.url }}" width="150" alt="">
+    <a href="{% url 'editar' espaco.id %}">EDITAR</a>
+    <a href="{% url 'deletar' espaco.id %}">DELETAR</a>
+
+{% endfor %}
+<br>
+<a href="{% url 'criarEspaco' %}">cadastro</a>
+</body>
+</html>
