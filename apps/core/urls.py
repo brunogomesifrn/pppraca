@@ -11,5 +11,4 @@ urlpatterns = [
     path('sobre-a-praca/', sobrePraca, name='sobrePraca'),
     path('visitacao/', visitacao, name='visitacao'),
     path('plantas/', include('apps.plantas.urls')),
-    
 ]

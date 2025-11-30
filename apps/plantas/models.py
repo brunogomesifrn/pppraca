@@ -17,8 +17,8 @@ class Planta(models.Model):
     saberes_afro = models.CharField(max_length=255)
     saberes_indigenas = models.CharField(max_length=255)
     qr_code = models.ImageField(upload_to="qrcodes/")
-    # id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE)
-    # id_familia = models.ForeignKey(Familia, on_delete=models.CASCADE)
+    # id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE) DESCOMENTAR DEPOIS
+    # id_familia = models.ForeignKey(Familia, on_delete=models.CASCADE) DESCOMENTAR DEPOIS
     id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE, null=True, blank=True)
     id_familia = models.ForeignKey(Familia, on_delete=models.CASCADE, null=True, blank=True)
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listagem de Plantas</h1>
+
+{% for planta in lista_plantas %}
+    <p>{{planta.nome_popular}}</p>
+    <p>{{planta.nome_cientifico}}</p>
+    <a href="{% url 'editar' planta.id %}">EDITAR</a>
+    <a href="{% url 'deletar' planta.id %}">DELETAR</a>
+
+{% endfor %}
+<br>
+<a href="{% url 'criarPlanta' %}">cadastro</a>
+</body>
+</html>

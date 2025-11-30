@@ -8,47 +8,11 @@
 <body>
     <h1>Criação de Planta</h1>
     <div class="container">
-        <form action="{% url 'criarPlanta' %}" method="POST"> {% csrf_token %}
-            <label for="">Nome Popular:</label>
-            <input type="text" name="nome_popular">
-            <br>
-            <label for="">Nome Científico:</label>
-            <input type="text" name="nome_cientifico">
-            <br>
-            <!-- <label for="">Origem:</label>
-            <input type="text" name="origem">
-            <br>
-            <label for="">Usos:</label>
-            <input type="text" name="usos">
-            <br>
-            <label for="">Saberes Afrodescendentes:</label>
-            <input type="text" name="saberes_afro">
-            <br>
-            <label>QR Code:</label>
-            <input type="file" name="qr_code">
-            <br>
-            <label for="">Saberes Afrodescendentes:</label>
-            <input type="text" name="saberes_afro">
-            <br>
-            <label>ID Espaço:</label>
-                <select name="id_espaco">
-                    {% for espaco in espacos %}
-                        <option value="{{ espaco.id }}">{{ espaco.nome }}</option>
-                    {% endfor %}
-                </select>
-                <br>
-            <label>ID Familia:</label>
-                <select name="id_familia">
-                    {% for familia in familia %}
-                        <option value="{{ familia.id }}">{{ familia.nome }}</option>
-                    {% endfor %}
-                </select>
-                <br> -->
-            <input type="submit" value="Cadastrar">
-
+        <form action="" method="POST"> {% csrf_token %}
+                {{form}}
+                <button type="submit">Salvar</button>
         </form>
     </div>
-
 
 </body>
 </html>
