@@ -7,8 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('criarespaco/', criarEspaco, name='criarEspaco'),
     path('listarespaco/', listEspaco, name='listEspaco'),
-    path('editar/<int:id>/', editar, name='editar'),
-    path('deletar/<int:id>', deletar, name='deletar'),
+    path('editar/<int:id>/', editar, name='editarEspaco'),
+    path('deletar/<int:id>', deletar, name='deletarEspaco'),
 
 ]
 

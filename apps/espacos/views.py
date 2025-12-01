@@ -29,7 +29,7 @@ def criarEspaco(request):
 def editar(request, id):
     espaco = Espaco.objects.get(pk=id)
 
-    form = EspacoForm(request.POST or None, instance=espaco)
+    form = EspacoForm(request.POST or None, request.FILES or None, instance=espaco)
     if form.is_valid():
         form.save()
         return redirect('listEspaco')

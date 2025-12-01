@@ -11,8 +11,8 @@
 {% for planta in lista_plantas %}
     <p>{{planta.nome_popular}}</p>
     <p>{{planta.nome_cientifico}}</p>
-    <a href="{% url 'editar' planta.id %}">EDITAR</a>
-    <a href="{% url 'deletar' planta.id %}">DELETAR</a>
+    <a href="{% url 'editarPlanta' planta.id %}">EDITAR</a>
+    <a href="{% url 'deletarPlanta' planta.id %}">DELETAR</a>
 
 {% endfor %}
 <br>
