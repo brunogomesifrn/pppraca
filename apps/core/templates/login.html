@@ -53,6 +53,14 @@
           <div class="login-card">
               <h1>Login</h1>
 
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="alert alert-danger" role="alert">
+                          {{ message }}
+                      </div>
+                  {% endfor %}
+              {% endif %}
+
               <form method="POST" action="{% url 'login' %}">
                   {% csrf_token %}
 
@@ -67,8 +75,9 @@
                       <input type="password" class="form-control" id="password" name="password"
                             placeholder="Digite sua senha" required>
                   </div>
-
+                  
                   <button type="submit" class="btn btn-login w-100">Entrar</button>
+                  
               </form>
 
               <small>

@@ -9,14 +9,15 @@
         <h1>Listagem de Usuarios</h1>
 
 {% for usuario in lista_usuarios %}
+    <p>{{usuario.username}}</p>
     <p>{{usuario.email}}</p>
-    <p>{{usuario.senha}}</p>
     <a href="{% url 'editarUsuario' usuario.id %}">EDITAR</a>
     <a href="{% url 'deletarUsuario' usuario.id %}">DELETAR</a>
     
 {% endfor %}
 <br>
-<a href="{% url 'criarUsuario' %}">cadastro</a>
+<br>
+<a href="{% url 'criarUsuario' %}">Cadastro</a>
 <p><a href="{% url 'logout' %}">Sair</a></p>
 </body>
 </html>

@@ -1,10 +1,30 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Usuario
 from apps.core.forms import UsuarioForm
 # Create your views here.
 
 
+#LOGIN DO USUÁRIO
+def loginUsuario(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        senha = request.POST.get("password")
+
+        usuario = authenticate(request, username=email, password=senha)
+
+        if usuario is not None:
+            login(request, usuario)
+            return redirect('listUsuario')
+        else:
+            messages.error(request, "E-mail ou senha incorretos.")
+
+    return render(request, 'login.html')
+
 #FUNÇÃO PARA LISTAR AS USUARIO
+@login_required
 def listUsuario(request):
     listUsuario = Usuario.objects.all()
     context = {

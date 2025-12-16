@@ -122,9 +122,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+AUTH_USER_MODEL = 'usuarios.Usuario'
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'listUsuario'
-LOGOUT_REDIRECT_URL = 'login' #REVISAR DEPOIS
+LOGOUT_REDIRECT_URL = 'logout' #REVISAR DEPOIS
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

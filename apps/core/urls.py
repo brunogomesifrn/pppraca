@@ -1,6 +1,7 @@
 from django.urls import path, include
 from .views import *
 from django.contrib.auth.views import LoginView, LogoutView
+from apps.usuarios.views import loginUsuario
 
 
 from django.conf import settings
@@ -12,7 +13,8 @@ urlpatterns = [
     path('acontecimentos/', acontecimentos, name="acontecimentos"),
     path('contato/', contato, name='contato'),
     path('espacos/', espacos, name='espacos'),
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    # path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', loginUsuario, name='login'),
     path('login/', LogoutView.as_view(), name='logout'), #REVISAR DEPOIS
     # path('login/', login, name='login'),
     path('sobre-a-praca/', sobrePraca, name='sobrePraca'),

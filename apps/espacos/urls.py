@@ -8,10 +8,6 @@ urlpatterns = [
     path('criarespaco/', criarEspaco, name='criarEspaco'),
     path('listarespaco/', listEspaco, name='listEspaco'),
     path('editar/<int:id>/', editar, name='editarEspaco'),
-    path('deletar/<int:id>', deletar, name='deletarEspaco'),
+    path('deletar/<int:id>/', deletar, name='deletarEspaco'),
 
 ]
-
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
