@@ -23,3 +23,8 @@ class FamiliaForm(ModelForm):
         class Meta:
                 model = Familia
                 fields = ['nome', 'imagem']
+
+class FotosPlantaForm(ModelForm):
+        class Meta:
+                model = FotosPlanta
+                fields = ['planta', 'nome', 'imagem_planta']

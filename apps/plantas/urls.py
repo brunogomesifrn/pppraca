@@ -12,4 +12,9 @@ urlpatterns = [
     path('listarfamilia/', listFamilia, name='listFamilia'),
     path('editarfamilia/<int:id>/', editarFamilia, name='editarFamilia'),
     path('deletarfamilia/<int:id>/', deletarFamilia, name='deletarFamilia'),
+
+    path('criarfoto/', criar_foto, name='criarFotosPlanta'),
+    path('listarfoto/', listFotosPlanta, name='listFotosPlanta'),
+    path('editarfoto/<int:id>/', editarFotosPlanta, name='editarFotosPlanta'),
+    path('deletarfoto/<int:id>/', deletarFotosPlanta, name='deletarFotosPlanta'),
 ]

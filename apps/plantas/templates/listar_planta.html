@@ -186,7 +186,19 @@
       .header{ align-items: flex-start; flex-direction: column; }
     }
 
-    
+    /* aaaaaaaaaaaa */
+
+    .planta-img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 12px 0;
+  }
+
+  .planta-img.placeholder{
+    background: #eee;
+  }
   </style>
 </head>
 
@@ -215,6 +227,14 @@
                   <p class="meta"><strong>Nome científico:</strong> {{ planta.nome_cientifico }}</p>
                 </div>
               </div>
+
+              {% with foto=planta.fotos.first %}
+                {% if foto and foto.imagem_planta %}
+                  <img class="planta-img" src="{{ foto.imagem_planta.url }}" alt="Foto da planta {{ planta.nome_popular }}">
+                {% else %}
+                  <div class="planta-img placeholder"></div>
+                {% endif %}
+              {% endwith %}
 
               <div class="familia-box">
                 {% if planta.familia.imagem %}

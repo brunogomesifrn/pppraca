@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Fotos das Plantas</title>
+</head>
+<body>
+    <h1>Listagem de Fotos das Plantas</h1>
+
+    <a href="{% url 'criarFotosPlanta' %}">Cadastrar Nova Foto</a>
+
+    <hr>
+
+    {% for foto in lista_fotos %}
+        <div style="margin-bottom: 20px;">
+            <p><strong>Planta:</strong> {{ foto.planta.nome_popular }}</p>
+            <p><strong>Nome da Foto:</strong> {{ foto.nome }}</p>
+
+            {% if foto.imagem_planta %}
+                <img src="{{ foto.imagem_planta.url }}" width="200" alt="{{ foto.nome }}">
+            {% endif %}
+
+            <br><br>
+
+            <a href="{% url 'editarFotosPlanta' foto.id %}">Editar</a>
+            <a href="{% url 'deletarFotosPlanta' foto.id %}">Deletar</a>
+        </div>
+
+        <hr>
+    {% empty %}
+        <p>Nenhuma foto cadastrada.</p>
+    {% endfor %}
+
+</body>
+</html>

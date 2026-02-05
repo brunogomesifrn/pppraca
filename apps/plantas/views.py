@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Planta, Familia
-from apps.core.forms import PlantaForm, FamiliaForm
+from .models import Planta, Familia, FotosPlanta
+from apps.core.forms import PlantaForm, FamiliaForm, FotosPlantaForm
 # Create your views here.
 
 
@@ -86,3 +86,44 @@ def deletarFamilia(request, id):
     familia = Familia.objects.get(pk=id)
     familia.delete()
     return redirect('listFamilia')
+
+# FUNÇÃO PARA LISTAR AS FOTOS DAS PLANTAS
+def listFotosPlanta(request):
+    lista_fotos = FotosPlanta.objects.select_related("planta").all()
+    context = {
+        "lista_fotos": lista_fotos
+    }
+    return render(request, "listar_foto.html", context)
+
+# FUNÇÃO PARA CRIAR AS FOTOS DAS PLANTAS
+def criar_foto(request):
+    form = FotosPlantaForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        form.save()
+        return redirect("listFotosPlanta")
+
+    context = {
+        "form": form
+    }
+    return render(request, "criar_foto.html", context)
+
+# FUNÇÃO PARA EDITAR AS FOTOS DAS PLANTAS
+def editarFotosPlanta(request, id):
+    foto = FotosPlanta.objects.get(pk=id)
+
+    form = FotosPlantaForm(request.POST or None, request.FILES or None, instance=foto)
+    if form.is_valid():
+        form.save()
+        return redirect("listFotosPlanta")
+
+    context = {
+        "form": form
+    }
+    return render(request, "criar_foto.html", context)
+
+# FUNÇÃO PARA DELETAR AS FOTOS DAS PLANTAS
+def deletarFotosPlanta(request, id):
+    foto = FotosPlanta.objects.get(pk=id)
+    foto.delete()
+    return redirect("listFotosPlanta")

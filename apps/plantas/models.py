@@ -10,11 +10,7 @@ class Familia(models.Model):
         return self.nome
 
 class Planta(models.Model):
-    familia = models.ForeignKey(
-        Familia,
-        on_delete=models.PROTECT,
-        related_name="plantas"
-    )
+    familia = models.ForeignKey(Familia, on_delete=models.PROTECT,related_name="plantas")
     nome_popular = models.CharField(max_length=255)
     nome_cientifico = models.CharField(max_length=255)
     origem = models.CharField(max_length=255)
@@ -22,17 +18,15 @@ class Planta(models.Model):
     saberes_afro = models.CharField(max_length=255)
     saberes_indigenas = models.CharField(max_length=255)
     qr_code = models.ImageField(upload_to="qrcodes/")
-    #id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE) DESCOMENTAR DEPOIS
-    #id_familia = models.ForeignKey(Familia, on_delete=models.CASCADE) DESCOMENTAR DEPOIS
-    id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE, null=True, blank=True)
-    id_familia = models.ForeignKey(Familia, on_delete=models.CASCADE, null=True, blank=True)
+    id_espaco = models.ForeignKey(Espaco, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome_popular
 
 class FotosPlanta(models.Model):
-    nome = models.CharField(max_length=255)
-    id_planta = models.ForeignKey(Planta, on_delete=models.CASCADE)
+    planta = models.ForeignKey(Planta, on_delete=models.CASCADE, related_name="fotos")
+    nome = models.CharField(max_length=255, blank=True)
+    imagem_planta = models.ImageField(upload_to="plantas/fotos/")
     
     def __str__(self):
-        return self.nome
+        return self.nome or f"Foto de {self.planta.nome_popular}"
