@@ -20,7 +20,7 @@ urlpatterns = [
     path('sobre-a-praca/', sobrePraca, name='sobrePraca'),
     path('visitacao/', visitacao, name='visitacao'),
     path('plantas/', include('apps.plantas.urls')),
-    path('espaços/', include('apps.espacos.urls')),
+    path('espacos/', include('apps.espacos.urls')),
     path('usuarios/', include('apps.usuarios.urls')),
 ]
 

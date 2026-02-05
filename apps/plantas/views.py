@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Planta
-from apps.core.forms import PlantaForm
+from .models import Planta, Familia
+from apps.core.forms import PlantaForm, FamiliaForm
 # Create your views here.
 
 
@@ -26,7 +26,7 @@ def criarPlanta(request):
     return render(request, 'criar_planta.html', context)
 
 #FUNÇÃO PARA EDITAR AS PLANTAS
-def editar(request, id):
+def editarPlanta(request, id):
     planta = Planta.objects.get(pk=id)
 
     form = PlantaForm(request.POST or None, instance=planta)
@@ -40,7 +40,49 @@ def editar(request, id):
     return render(request, 'criar_planta.html', context)
 
 #FUNÇÃO PARA DELETAR AS PLANTAS
-def deletar(request, id):
+def deletarPlanta(request, id):
     planta = Planta.objects.get(pk=id)
     planta.delete()
     return redirect('listPlanta')
+
+# FUNÇÃO PARA CRIAR AS FAMÍLIAS
+def criarFamilia(request):
+    form = FamiliaForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        form.save()
+        return redirect('listFamilia')
+
+    context = {
+        'form': form
+    }
+    return render(request, 'criar_familia.html', context)
+
+# FUNÇÃO PARA LISTAR AS FAMÍLIAS
+def listFamilia(request):
+    listFamilia = Familia.objects.all()
+    context = {
+        'lista_familias': listFamilia
+    }
+    return render(request, 'listar_familia.html', context)
+
+# FUNÇÃO PARA EDITAR AS FAMÍLIAS
+def editarFamilia(request, id):
+    familia = Familia.objects.get(pk=id)
+
+    form = FamiliaForm(request.POST or None, request.FILES or None, instance=familia)
+
+    if form.is_valid():
+        form.save()
+        return redirect('listFamilia')
+
+    context = {
+        'form': form
+    }
+    return render(request, 'criar_familia.html', context)
+
+# FUNÇÃO PARA DELETAR AS FAMÍLIAS
+def deletarFamilia(request, id):
+    familia = Familia.objects.get(pk=id)
+    familia.delete()
+    return redirect('listFamilia')

@@ -10,7 +10,7 @@
 
 {% for espaco in lista_espacos %}
     <p>{{espaco.nome}}</p>
-    <img src="{{ espaco.imagem.url }}" width="150" alt="">
+    <img src="{{ espaco.imagem_espaco.url }}" width="150" alt="">
     <a href="{% url 'editarEspaco' espaco.id %}">EDITAR</a>
     <a href="{% url 'deletarEspaco' espaco.id %}">DELETAR</a>
 

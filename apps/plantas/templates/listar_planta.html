@@ -1,21 +1,253 @@
+{% extends 'publica/base.html' %}
+{% load static %}
+{% block conteudo %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem de Plantas</title>
+
+  <style>
+    :root{
+      --verde-escuro: #4f7f0b;   /* barra / botões */
+      --verde-escuro-2: #3f6b08; /* hover */
+      --verde-medio: #95b46a;    /* fundo */
+      --verde-claro: #dfe9c8;    /* topo */
+      --texto: #123a07;
+      --branco: #ffffff;
+    }
+    
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--verde-medio);
+    }
+
+    /* Topo */
+    .topbar{
+      background: var(--verde-claro);
+      padding: 18px 0;
+      border-bottom: 6px solid var(--verde-escuro);
+    }
+    .wrap{
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .title h1{
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: .2px;
+    }
+    .title p{
+      margin: 6px 0 0;
+      opacity: .9;
+    }
+
+    /* Botão principal */
+    .btn{
+      display: inline-block;
+      padding: 10px 14px;
+      background: var(--verde-escuro);
+      color: var(--branco);
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: .15s ease-in-out;
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .btn:hover{ background: var(--verde-escuro-2); }
+
+    /* Conteúdo */
+    main{ padding: 24px 0 40px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card{
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.08);
+      backdrop-filter: blur(2px);
+    }
+
+    .card-top{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .plant-name{
+      font-size: 18px;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .meta{
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.35;
+      opacity: .95;
+    }
+    .tag{
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(79,127,11,.15);
+      border: 1px solid rgba(79,127,11,.25);
+      margin-top: 10px;
+    }
+
+    .familia-box{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(0,0,0,.18);
+    }
+    .familia-img{
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.4);
+    }
+    .familia-text{
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .familia-text strong{
+      display: block;
+      font-size: 12px;
+      opacity: .85;
+    }
+
+    .actions{
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .link{
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.6);
+      color: var(--texto);
+      transition: .15s ease-in-out;
+    }
+    .link:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .link.danger{
+      background: rgba(255,255,255,.6);
+      border-color: rgba(160,0,0,.25);
+      color: #7a0b0b;
+    }
+
+    .empty{
+      background: rgba(255,255,255,.55);
+      border: 1px dashed rgba(0,0,0,.2);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 520px){
+      .title h1{ font-size: 22px; }
+      .header{ align-items: flex-start; flex-direction: column; }
+    }
+
+    
+  </style>
 </head>
+
 <body>
-    <h1>Listagem de Plantas</h1>
+  <header class="topbar">
+    <div class="wrap header">
+      <div class="title">
+        <h1>Listagem de Plantas</h1>
+        <p>Consulte, edite ou remova registros do acervo.</p>
+      </div>
 
-{% for planta in lista_plantas %}
-    <p>{{planta.nome_popular}}</p>
-    <p>{{planta.nome_cientifico}}</p>
-    <a href="{% url 'editarPlanta' planta.id %}">EDITAR</a>
-    <a href="{% url 'deletarPlanta' planta.id %}">DELETAR</a>
+      <a class="btn" href="{% url 'criarPlanta' %}">+ Cadastrar nova planta</a>
+    </div>
+  </header>
 
-{% endfor %}
-<br>
-<a href="{% url 'criarPlanta' %}">cadastro</a>
+  <main>
+    <div class="wrap">
+
+      {% if lista_plantas %}
+        <div class="grid">
+          {% for planta in lista_plantas %}
+            <div class="card">
+              <div class="card-top">
+                <div>
+                  <p class="plant-name">{{ planta.nome_popular }}</p>
+                  <p class="meta"><strong>Nome científico:</strong> {{ planta.nome_cientifico }}</p>
+                </div>
+              </div>
+
+              <div class="familia-box">
+                {% if planta.familia.imagem %}
+                  <img class="familia-img" src="{{ planta.familia.imagem.url }}" alt="Imagem da família {{ planta.familia.nome }}">
+                {% else %}
+                  <div class="familia-img"></div>
+                {% endif %}
+
+                <div class="familia-text">
+                  <strong>Família</strong>
+                  {{ planta.familia.nome }}
+                </div>
+              </div>
+              
+
+
+              <div class="actions">
+                <a class="link" href="{% url 'editarPlanta' planta.id %}">Editar</a>
+                <a class="link danger" href="{% url 'deletarPlanta' planta.id %}">Deletar</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="empty">
+          <p><strong>Nenhuma planta cadastrada.</strong></p>
+          <p>Use o botão acima para cadastrar a primeira planta.</p>
+        </div>
+      {% endif %}
+
+    </div>
+
+  </main>
 </body>
 </html>
+{% endblock %}

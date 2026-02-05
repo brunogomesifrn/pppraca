@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Famílias</title>
+</head>
+<body>
+    <h1>Listagem de Famílias</h1>
+
+    {% for familia in lista_familias %}
+        <p><strong>Nome:</strong> {{ familia.nome }}</p>
+
+        {% if familia.imagem %}
+            <img src="{{ familia.imagem.url }}" width="150">
+        {% endif %}
+
+        <br>
+        <a href="{% url 'editarFamilia' familia.id %}">EDITAR</a>
+        <a href="{% url 'deletarFamilia' familia.id %}">DELETAR</a>
+        <hr>
+    {% empty %}
+        <p>Nenhuma família cadastrada.</p>
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'criarFamilia' %}">Cadastrar nova família</a>
+
+</body>
+</html>

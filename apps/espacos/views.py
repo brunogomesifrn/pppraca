@@ -26,7 +26,7 @@ def criarEspaco(request):
     return render(request, 'criar_espaco.html', context)
 
 #FUNÇÃO PARA EDITAR ESPAÇOS
-def editar(request, id):
+def editarEspaco(request, id):
     espaco = Espaco.objects.get(pk=id)
 
     form = EspacoForm(request.POST or None, request.FILES or None, instance=espaco)
@@ -40,7 +40,7 @@ def editar(request, id):
     return render(request, 'criar_espaco.html', context)
 
 #FUNÇÃO PARA DELETAR ESPAÇOS
-def deletar(request, id):
+def deletarEspaco(request, id):
     espaco = Espaco.objects.get(pk=id)
     espaco.delete()
     return redirect('listEspaco')
